@@ -23,6 +23,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
   },
+  btnPermissionBluetooth: {
+    backgroundColor: 'orange',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    marginRight: 10,
+  },
+  btnPermission: {
+    backgroundColor: 'orange',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+  },
 });
 
 export default styles;

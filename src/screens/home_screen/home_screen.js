@@ -168,18 +168,32 @@ export const HomeScreenComponent = ({
             {registerState === 'REGISTER' ? 'UNREGISTER' : 'REGISTER'}
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.btnRegister, {backgroundColor: 'orange'}]}
-          onPress={async () => {
-            if (Platform.OS == 'ios') {
-              await request(PERMISSIONS.IOS.BLUETOOTH);
-            }
-            if (Platform.OS == 'android') {
-              await request(PERMISSIONS.ANDROID.BLUETOOTH_CONNECT);
-            }
-          }}>
-          <Text>Request bluetooth</Text>
-        </TouchableOpacity>
+        <View style={{flexDirection: 'row'}}>
+          <TouchableOpacity
+            style={[styles.btnRegister, styles.btnPermissionBluetooth]}
+            onPress={async () => {
+              if (Platform.OS == 'ios') {
+                await request(PERMISSIONS.IOS.BLUETOOTH);
+              }
+              if (Platform.OS == 'android') {
+                await request(PERMISSIONS.ANDROID.BLUETOOTH_CONNECT);
+              }
+            }}>
+            <Text>Request bluetooth</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.btnRegister, styles.btnPermission]}
+            onPress={async () => {
+              if (Platform.OS == 'ios') {
+                await request(PERMISSIONS.IOS.RECORD_AUDIO);
+              }
+              if (Platform.OS == 'android') {
+                await request(PERMISSIONS.ANDROID.RECORD_AUDIO);
+              }
+            }}>
+            <Text>Request microphone</Text>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity
           style={[styles.btnRegister, {backgroundColor: 'yellow'}]}
           onPress={() => {
