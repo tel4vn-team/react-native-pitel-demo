@@ -185,7 +185,7 @@ export const HomeScreenComponent = ({
             style={[styles.btnRegister, styles.btnPermission]}
             onPress={async () => {
               if (Platform.OS == 'ios') {
-                await request(PERMISSIONS.IOS.RECORD_AUDIO);
+                await request(PERMISSIONS.IOS.MICROPHONE);
               }
               if (Platform.OS == 'android') {
                 await request(PERMISSIONS.ANDROID.RECORD_AUDIO);
