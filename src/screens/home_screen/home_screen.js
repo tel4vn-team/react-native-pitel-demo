@@ -49,6 +49,7 @@ export const HomeScreenComponent = ({
   const {
     callState,
     receivedPhoneNumber,
+    receivedDisplayName,
     registerState,
 
     setCallState,
@@ -87,18 +88,10 @@ export const HomeScreenComponent = ({
   };
 
   // Handle function
-  const handleCreated = () => {
-    navigation.navigate('Call', {
-      pitelSDK: pitelSDK,
-      phoneNumber: phoneNumber,
-      direction: 'Outgoing',
-      callState,
-    });
-  };
-
   const handleReceived = () => {
     navigation.navigate('Call', {
       phoneNumber: receivedPhoneNumber,
+      displayName: receivedDisplayName,
       direction: 'Incoming',
       callState,
       callID,
@@ -123,7 +116,6 @@ export const HomeScreenComponent = ({
       sdkOptions={sdkOptions}
       registerFunc={registerFunc}
       setIsCallOut={setIsCallOut}
-      onCreated={handleCreated}
       onReceived={handleReceived}
       onHangup={handleHangup}
       onIOSToken={iosToken => {
