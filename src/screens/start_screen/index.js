@@ -17,6 +17,7 @@ export const StartScreen = ({navigation, route}) => {
     navigation.navigate('Call', {
       pitelSDK: pitelSDK,
       phoneNumber: phoneNumber,
+      displayName: `${EXTENSION_DISPLAY_NAME}`,
       direction: 'Outgoing',
       callState,
     });

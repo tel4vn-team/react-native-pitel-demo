@@ -8235,6 +8235,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-base64@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "react-native-base64@npm:0.2.1"
+  checksum: 5127c857250cabb9c24f494b56185a4339bd0ebb859824a01c2f4eb3264379556e06efc8e59ffb9585cbf1c5e6fee18f50f4a6e8a1c63fe4b5cedf0658f8c25e
+  languageName: node
+  linkType: hard
+
 "react-native-callkeep@npm:4.3.9":
   version: 4.3.9
   resolution: "react-native-callkeep@npm:4.3.9"
@@ -8303,7 +8310,10 @@ __metadata:
   dependencies:
     "@react-native-async-storage/async-storage": ^1.19.1
     "@react-native-firebase/messaging": ^18.1.0
+    react-native-base64: ^0.2.1
     react-native-callkeep: ^4.3.9
+    react-native-full-screen-notification-incoming-call: ^1.0.1
+    utf8: ^3.0.0
     uuid: ^9.0.0
   peerDependencies:
     react: "*"
@@ -8750,6 +8760,7 @@ __metadata:
     react: 18.2.0
     react-native: 0.74.1
     react-native-background-timer: 2.4.1
+    react-native-base64: ^0.2.1
     react-native-callkeep: 4.3.9
     react-native-get-random-values: 1.9.0
     react-native-incall-manager: 4.1.0
@@ -8760,6 +8771,7 @@ __metadata:
     react-native-voip-push-notification: ^3.3.2
     react-test-renderer: 18.2.0
     typescript: 5.0.4
+    utf8: ^3.0.0
     uuid: 9.0.0
   languageName: unknown
   linkType: soft
@@ -9795,6 +9807,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"utf8@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "utf8@npm:3.0.0"
+  checksum: cb89a69ad9ab393e3eae9b25305b3ff08bebca9adc839191a34f90777eb2942f86a96369d2839925fea58f8f722f7e27031d697f10f5f39690f8c5047303e62d
+  languageName: node
+  linkType: hard
+  
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
