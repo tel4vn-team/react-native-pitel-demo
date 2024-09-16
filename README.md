@@ -9,7 +9,7 @@ React Native - Pitel VoIP demo
 > Make sure "PitelCallNotif" must wrap on the first screen (the first screen that appears when opening the app, like example).
 > Please refer to the example before integrating the package into your application.
 
-- **Setup to wake up app**: please follow guide in [here](https://https://github.com/anhquangmobile/react-native-pitel-voip/blob/1.1.0-rc/docs/PUSH_NOTIF.md) to setting push notification (FCM for android), Pushkit (for IOS).
+- **Setup to wake up app**: please follow guide in [here](https://https://github.com/tel4vn-team/react-native-pitel-voip/blob/main/docs/PUSH_NOTIF.md) to setting push notification (FCM for android), Pushkit (for IOS).
 
 ```yaml
 yarn install
@@ -18,7 +18,7 @@ yarn install
 - Installing your Firebase configuration file:
 
 * Android: add file `google-services.json` to `android/app/google-services.json`
-* IOS: open Xcode & add file `GoogleService-Info.plist` to `ios/GoogleService-Info.plist` (guide in [here](https://github.com/anhquangmobile/react-native-pitel-voip/blob/1.1.0-rc/PUSH_NOTIF.md))
+* IOS: open Xcode & add file `GoogleService-Info.plist` to `ios/GoogleService-Info.plist` (guide in [here](https://github.com/tel4vn-team/react-native-pitel-voip/blob/main/PUSH_NOTIF.md))
 
 # Usage
 
@@ -29,6 +29,8 @@ const ext = `${EXTENSION}`;
 const sipPass = `${EXTENSION_SIP_PASSWORD}`;
 const appId = `${BUNDLE_ID}`;
 const domainUrl = `${DOMAIN}`;
+const displayName = `${EXTENSION_DISPLAY_NAME}`; // Display name of extension when incoming/outgoing call.
+
 ...
 const sdkOptionsInit = {
     sipDomain: `${DOMAIN}`,
@@ -39,6 +41,7 @@ const sdkOptionsInit = {
     bundleId: appId, // Bundle id for IOS
     packageId: appId, // Package id for Android
     teamId: `${TEAM_ID}`,
+    displayName: displayName,
   };
 ```
 

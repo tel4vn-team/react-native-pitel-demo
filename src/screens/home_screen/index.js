@@ -13,12 +13,14 @@ const ext = `${EXTENSION}`;
 const sipPass = `${EXTENSION_SIP_PASSWORD}`;
 const appId = `${BUNDLE_ID}`;
 const domainUrl = `${DOMAIN}`;
+const displayName = `${EXTENSION_DISPLAY_NAME}`; // Display name of extension when incoming/outgoing call.
 
 export const HomeScreen = ({navigation}) => {
   const sdkOptionsInit = {
     sipDomain: `${DOMAIN}`,
     port: `${PORT}`,
     extension: ext,
+    displayName: displayName,
     wssServer: `${WSS_URL}`,
     sipPassword: sipPass,
     bundleId: appId, // Bundle id for IOS
